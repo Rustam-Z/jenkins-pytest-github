@@ -1,0 +1,29 @@
+<testsuites>
+    <testsuite name="pytest" errors="0" failures="0" skipped="0" tests="25" time="0.115" timestamp="2022-02-22T12:11:03.731536" hostname="EPUZTASW0195">
+        <testcase classname="tests.test_calc_class" name="test_last_answer_init" time="0.005"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_add" time="0.003"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_subtract" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_subtract_negative" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_multiply" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_divide" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_divide_by_zero" time="0.001"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_maximum[3.0-2.0-3.0]" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_maximum[2.0-3.0-3.0]" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_maximum[3.0-3.0-3.0]" time="0.003"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_minimum[3.0-2.0-2.0]" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_minimum[2.0-3.0-2.0]" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_class" name="test_minimum[2.0-2.0-2.0]" time="0.003"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_add" time="0.001"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_subtract" time="0.001"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_subtract_negative" time="0.001"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_multiply" time="0.001"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_divide" time="0.001"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_divide_by_zero" time="0.001"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_maximum[3.0-2.0-3.0]" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_maximum[2.0-3.0-3.0]" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_maximum[3.0-3.0-3.0]" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_minimum[3.0-2.0-2.0]" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_minimum[2.0-3.0-2.0]" time="0.002"></testcase>
+        <testcase classname="tests.test_calc_func" name="test_minimum[2.0-2.0-2.0]" time="0.001"></testcase>
+    </testsuite>
+</testsuites>

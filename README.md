@@ -1,5 +1,9 @@
 # jenkins-pytest-github
-Jenkins CI pipeline integrated with the GitHub Webhook. In any push action on GitHub, auto tests will be running by Jenkins, and coverage report will be generated.
+Jenkins CI pipeline integrated with the GitHub Webhook. 
+
+In any push action on GitHub, auto tests will be running by Jenkins, and coverage report will be generated. ("Test Results Analyzer" plugin need to be installed).
+
+Go to jenkins create a job. Connect a GitHub repo (manage SSH keys using `ssh-keygen`). Private to Jenkins, public to GitHub.
 
 ## Project structure
 - `tests/test_calc_func.py` - contains math functions
@@ -14,4 +18,4 @@ It is also possible to run pytest directly with the "pytest" or "py.test" comman
 - `python -m pytest -v --tb=no`
 - `python -m pytest --junitxml=results.xml`
 - `python -m pytest --cov=src` to see the coverage
-- `python -m pytest --cov=src --cov-report=html`
+- `python -m pytest --cov=src --cov-report=html` check htmlcov/index.html
