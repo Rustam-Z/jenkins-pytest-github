@@ -98,6 +98,10 @@ echo "Build, finished, SUCCESS!"
 12. Going back to Jenkins, <YOUR JOB>, you can click on "Test Results Analyzer" to see a view that lists which tests haven’t been run for different sessions, along with the pass/fail status 
 <br><img src="screenshots/14_test_report_2.png" width=500>
 
+13. Checking one more time, that everything works when I push;
+<br><img src="screenshots/15_one_more_check.png" width=500>
+
+
 ## How to run?
 - `pip install -r requirements.txt`
 - `python -m pytest -v --tb=no`
