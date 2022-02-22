@@ -1,0 +1,164 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/jenkins-job-1
+The recommended git tool is: NONE
+using credential GitHub-ssh-key
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/jenkins-job-1/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:Rustam-Z/jenkins-pytest-github.git # timeout=10
+Fetching upstream changes from git@github.com:Rustam-Z/jenkins-pytest-github.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+using GIT_SSH to set credentials GitHub-ssh-key
+ > git fetch --tags --force --progress -- git@github.com:Rustam-Z/jenkins-pytest-github.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 3cec9b0c9318179d2d2070b11ecce0391f040b59 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3cec9b0c9318179d2d2070b11ecce0391f040b59 # timeout=10
+Commit message: "testing Jenkins"
+ > git rev-list --no-walk faae54dfc618c0c58c28f00efcb01bb0e579de9d # timeout=10
+[jenkins-job-1] $ /bin/sh -xe /tmp/jenkins5896819344368968159.sh
++ echo *****************Starting running tests****************
+*****************Starting running tests****************
++ whoami
+jenkins
++ ls -la
+total 100
+drwxr-xr-x 8 jenkins jenkins  4096 Feb 22 18:01 .
+drwxr-xr-x 4 jenkins jenkins  4096 Feb 22 12:55 ..
+-rw-r--r-- 1 jenkins jenkins 53248 Feb 22 17:25 .coverage
+drwxr-xr-x 8 jenkins jenkins  4096 Feb 22 18:01 .git
+-rw-r--r-- 1 jenkins jenkins  1221 Feb 22 15:54 .gitignore
+drwxr-xr-x 3 jenkins jenkins  4096 Feb 22 15:55 .pytest_cache
+-rw-r--r-- 1 jenkins jenkins  1202 Feb 22 18:01 README.md
+drwxr-xr-x 2 jenkins jenkins  4096 Feb 22 16:09 htmlcov
+-rw-r--r-- 1 jenkins jenkins     0 Feb 22 12:56 pytest.ini
+-rw-r--r-- 1 jenkins jenkins    17 Feb 22 15:54 requirements.txt
+-rw-r--r-- 1 jenkins jenkins  2802 Feb 22 18:01 results.xml
+drwxr-xr-x 2 jenkins jenkins  4096 Feb 22 18:01 screenshots
+drwxr-xr-x 3 jenkins jenkins  4096 Feb 22 15:55 src
+drwxr-xr-x 3 jenkins jenkins  4096 Feb 22 15:55 tests
++ pwd
+/var/lib/jenkins/workspace/jenkins-job-1
++ which python3
+/usr/bin/python3
++ pip3 install -r requirements.txt
+Requirement already satisfied: pytest in /var/lib/jenkins/.local/lib/python3.8/site-packages (from -r requirements.txt (line 1)) (7.0.1)
+Requirement already satisfied: pytest-cov in /var/lib/jenkins/.local/lib/python3.8/site-packages (from -r requirements.txt (line 2)) (3.0.0)
+Requirement already satisfied: attrs>=19.2.0 in /usr/lib/python3/dist-packages (from pytest->-r requirements.txt (line 1)) (19.3.0)
+Requirement already satisfied: tomli>=1.0.0 in /var/lib/jenkins/.local/lib/python3.8/site-packages (from pytest->-r requirements.txt (line 1)) (2.0.1)
+Requirement already satisfied: packaging in /var/lib/jenkins/.local/lib/python3.8/site-packages (from pytest->-r requirements.txt (line 1)) (21.3)
+Requirement already satisfied: iniconfig in /var/lib/jenkins/.local/lib/python3.8/site-packages (from pytest->-r requirements.txt (line 1)) (1.1.1)
+Requirement already satisfied: py>=1.8.2 in /var/lib/jenkins/.local/lib/python3.8/site-packages (from pytest->-r requirements.txt (line 1)) (1.11.0)
+Requirement already satisfied: pluggy<2.0,>=0.12 in /var/lib/jenkins/.local/lib/python3.8/site-packages (from pytest->-r requirements.txt (line 1)) (1.0.0)
+Requirement already satisfied: coverage[toml]>=5.2.1 in /var/lib/jenkins/.local/lib/python3.8/site-packages (from pytest-cov->-r requirements.txt (line 2)) (6.3.2)
+Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /var/lib/jenkins/.local/lib/python3.8/site-packages (from packaging->pytest->-r requirements.txt (line 1)) (3.0.7)
+[jenkins-job-1] $ /bin/sh -xe /tmp/jenkins6382890906232394293.sh
++ echo ********************Running tests*********
+********************Running tests*********
++ python3 -m pytest -v --tb=no
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-7.0.1, pluggy-1.0.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /var/lib/jenkins/workspace/jenkins-job-1, configfile: pytest.ini
+plugins: cov-3.0.0
+collecting ... collected 25 items
+
+tests/test_calc_class.py::test_last_answer_init PASSED                   [  4%]
+tests/test_calc_class.py::test_add PASSED                                [  8%]
+tests/test_calc_class.py::test_subtract PASSED                           [ 12%]
+tests/test_calc_class.py::test_subtract_negative PASSED                  [ 16%]
+tests/test_calc_class.py::test_multiply PASSED                           [ 20%]
+tests/test_calc_class.py::test_divide PASSED                             [ 24%]
+tests/test_calc_class.py::test_divide_by_zero PASSED                     [ 28%]
+tests/test_calc_class.py::test_maximum[3.0-2.0-3.0] PASSED               [ 32%]
+tests/test_calc_class.py::test_maximum[2.0-3.0-3.0] PASSED               [ 36%]
+tests/test_calc_class.py::test_maximum[3.0-3.0-3.0] PASSED               [ 40%]
+tests/test_calc_class.py::test_minimum[3.0-2.0-2.0] PASSED               [ 44%]
+tests/test_calc_class.py::test_minimum[2.0-3.0-2.0] PASSED               [ 48%]
+tests/test_calc_class.py::test_minimum[2.0-2.0-2.0] PASSED               [ 52%]
+tests/test_calc_func.py::test_add PASSED                                 [ 56%]
+tests/test_calc_func.py::test_subtract PASSED                            [ 60%]
+tests/test_calc_func.py::test_subtract_negative PASSED                   [ 64%]
+tests/test_calc_func.py::test_multiply PASSED                            [ 68%]
+tests/test_calc_func.py::test_divide PASSED                              [ 72%]
+tests/test_calc_func.py::test_divide_by_zero PASSED                      [ 76%]
+tests/test_calc_func.py::test_maximum[3.0-2.0-3.0] PASSED                [ 80%]
+tests/test_calc_func.py::test_maximum[2.0-3.0-3.0] PASSED                [ 84%]
+tests/test_calc_func.py::test_maximum[3.0-3.0-3.0] PASSED                [ 88%]
+tests/test_calc_func.py::test_minimum[3.0-2.0-2.0] PASSED                [ 92%]
+tests/test_calc_func.py::test_minimum[2.0-3.0-2.0] PASSED                [ 96%]
+tests/test_calc_func.py::test_minimum[2.0-2.0-2.0] PASSED                [100%]
+
+============================== 25 passed in 0.05s ==============================
++ python3 -m pytest --junitxml=results.xml
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-7.0.1, pluggy-1.0.0
+rootdir: /var/lib/jenkins/workspace/jenkins-job-1, configfile: pytest.ini
+plugins: cov-3.0.0
+collected 25 items
+
+tests/test_calc_class.py .............                                   [ 52%]
+tests/test_calc_func.py ............                                     [100%]
+
+--- generated xml file: /var/lib/jenkins/workspace/jenkins-job-1/results.xml ---
+============================== 25 passed in 0.08s ==============================
++ python3 -m pytest --cov=src
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-7.0.1, pluggy-1.0.0
+rootdir: /var/lib/jenkins/workspace/jenkins-job-1, configfile: pytest.ini
+plugins: cov-3.0.0
+collected 25 items
+
+tests/test_calc_class.py .............                                   [ 52%]
+tests/test_calc_func.py ............                                     [100%]
+
+---------- coverage: platform linux, python 3.8.10-final-0 -----------
+Name                Stmts   Miss  Cover
+---------------------------------------
+src/__init__.py         0      0   100%
+src/calc_class.py      26      3    88%
+src/calc_func.py       15      1    93%
+---------------------------------------
+TOTAL                  41      4    90%
+
+
+============================== 25 passed in 0.08s ==============================
++ python3 -m pytest --cov=src --cov-report=html
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-7.0.1, pluggy-1.0.0
+rootdir: /var/lib/jenkins/workspace/jenkins-job-1, configfile: pytest.ini
+plugins: cov-3.0.0
+collected 25 items
+
+tests/test_calc_class.py .............                                   [ 52%]
+tests/test_calc_func.py ............                                     [100%]
+
+---------- coverage: platform linux, python 3.8.10-final-0 -----------
+Coverage HTML written to dir htmlcov
+
+
+============================== 25 passed in 0.09s ==============================
++ ls -la
+total 100
+drwxr-xr-x 8 jenkins jenkins  4096 Feb 22 18:01 .
+drwxr-xr-x 4 jenkins jenkins  4096 Feb 22 12:55 ..
+-rw-r--r-- 1 jenkins jenkins 53248 Feb 22 18:01 .coverage
+drwxr-xr-x 8 jenkins jenkins  4096 Feb 22 18:01 .git
+-rw-r--r-- 1 jenkins jenkins  1221 Feb 22 15:54 .gitignore
+drwxr-xr-x 3 jenkins jenkins  4096 Feb 22 15:55 .pytest_cache
+-rw-r--r-- 1 jenkins jenkins  1202 Feb 22 18:01 README.md
+drwxr-xr-x 2 jenkins jenkins  4096 Feb 22 16:09 htmlcov
+-rw-r--r-- 1 jenkins jenkins     0 Feb 22 12:56 pytest.ini
+-rw-r--r-- 1 jenkins jenkins    17 Feb 22 15:54 requirements.txt
+-rw-r--r-- 1 jenkins jenkins  2383 Feb 22 18:01 results.xml
+drwxr-xr-x 2 jenkins jenkins  4096 Feb 22 18:01 screenshots
+drwxr-xr-x 3 jenkins jenkins  4096 Feb 22 15:55 src
+drwxr-xr-x 3 jenkins jenkins  4096 Feb 22 15:55 tests
+[jenkins-job-1] $ /bin/sh -xe /tmp/jenkins4699624163803093438.sh
++ cp -a htmlcov/. /var/www/html/
++ date
+Tue Feb 22 18:01:13 UTC 2022
++ echo Build, finished, SUCCESS!
+Build, finished, SUCCESS!
+Finished: SUCCESS
