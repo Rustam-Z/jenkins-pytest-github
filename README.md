@@ -18,4 +18,11 @@ It is also possible to run pytest directly with the "pytest" or "py.test" comman
 - `python -m pytest -v --tb=no`
 - `python -m pytest --junitxml=results.xml`
 - `python -m pytest --cov=src` to see the coverage
-- `python -m pytest --cov=src --cov-report=html` check htmlcov/index.html
+- `python -m pytest --cov=src --cov-report=html` check htmlcov/index.html 
+
+
+## To give access to jenkins
+```
+cd /var
+sudo chown -R jenkins:root www/
+```
