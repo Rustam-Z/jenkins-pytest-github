@@ -17,6 +17,7 @@ pipeline {
         stage('test'){
             steps{
                 sh '''
+                source env/bin/activate
                 pytest
                 '''
             }
