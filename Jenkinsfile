@@ -18,6 +18,7 @@ pipeline {
             steps{
                 sh '''
                 source env/bin/activate
+                export PYTHONPATH="${PYTHONPATH}:./src"
                 pytest
                 '''
             }
